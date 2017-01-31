@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Amigos-Frontend</title>
-</head>
-<body ng-app="amigos">
-Hello {{2+2}}
-<div ng-controller="homeController as hc">
-<span ng-repeat="item in hc.items">{{item.name}}</span>
-</div>
-</body>
+<html lang="en" ng-app="amigos">
+    <head>
+        <meta charset="UTF-8">
+        <title>Amigos-Frontend</title>
+        <link href="resources/bootstrap.min.css"/>
+        <script src="resources/bootstrap.min.js"></script>
+        <script src="resources/angular.js"></script>
+        <script src="app.js"></script>
+        <script src="services/loginService.js"></script>
+        <script src="controllers/loginController.js"></script>
+    </head>
+    <body>
+    <div ng-controller="loginController as login">
+        <div ng-include="'views/login.html'"></div>
+    </div>
+    </body>
 
-<link href="resources/bootstrap.min.css"/>
-<script src="resources/bootstrap.min.js"></script>
-<script src="resources/angular.min.js"></script>
-<script src="app.js"></script>
-<script src="controllers/homeController.js"></script>
 </html>
